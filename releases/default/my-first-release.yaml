@@ -4,10 +4,6 @@ kind: HelmRelease
 metadata:
   name: my-first-release
   namespace: default
-  annotations:
-    flux.weave.works/automated: "true"
-    flux.weave.works/tag.angular: glob:*
-    flux.weave.works/tag.api: glob:*
 spec:
   chart:
     git: git@github.com:patrickbadley/my-first-flux-config.git
