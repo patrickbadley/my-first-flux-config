@@ -11,3 +11,6 @@ api:
   servicePort: 80
   containerPort: 80
   type: LoadBalancer
+
+ingress:
+  hostname: my-first-k8s-app.eastus.cloudapp.azure.com

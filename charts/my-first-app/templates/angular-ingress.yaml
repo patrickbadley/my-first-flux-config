@@ -1,0 +1,16 @@
+apiVersion: extensions/v1
+kind: Ingress
+metadata:
+  name: angular-ingress
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: {{ .Values.ingress.hostname }}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: {{ .Values.angular.appName }}
+          servicePort: {{ .Values.angular.servicePort }}
