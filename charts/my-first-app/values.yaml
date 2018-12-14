@@ -1,13 +1,13 @@
 angular:
   appName: angular-ui
-  image: [mydockerhubregistry]/values-ui:simple
+  image: mydockerhubregistry/values-ui:simple
   servicePort: 80
   containerPort: 4200
   type: LoadBalancer
 
 api:
   appName: api
-  image: [mydockerhubregistry]/values-api:simple
+  image: mydockerhubregistry/values-api:simple
   servicePort: 80
   containerPort: 80
   type: LoadBalancer
