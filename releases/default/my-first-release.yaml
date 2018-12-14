@@ -1,0 +1,21 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: my-first-release
+  namespace: default
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.angular: glob:*
+    flux.weave.works/tag.api: glob:*
+spec:
+  chart:
+    git: git@github.com:[mygitrepo]/my-first-flux-config.git
+    path: charts/my-first-app
+  releaseName: my-first-release
+  values:
+    angular:
+      image: [mydockerhubregistry]/values-ui:simple
+
+    api:
+      image: [mydockerhubregistry]/values-api:simple

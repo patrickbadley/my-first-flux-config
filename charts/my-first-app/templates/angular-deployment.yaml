@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.angular.appName }}
+  labels:
+    app: {{ .Values.angular.appName }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Values.angular.appName }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.angular.appName }}
+    spec:
+      containers:
+        - name: {{ .Values.angular.appName }}
+          image: {{ .Values.angular.image }}
+          ports:
+          - containerPort: {{ .Values.angular.containerPort }}
