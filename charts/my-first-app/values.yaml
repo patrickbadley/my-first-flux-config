@@ -3,14 +3,14 @@ angular:
   image: mydockerhubregistry/values-ui:simple
   servicePort: 80
   containerPort: 4200
-  type: LoadBalancer
+  type: ClusterIP
 
 api:
   appName: api
   image: mydockerhubregistry/values-api:simple
   servicePort: 80
   containerPort: 80
-  type: LoadBalancer
+  type: ClusterIP
 
 ingress:
   hostname: my-first-k8s-app.eastus.cloudapp.azure.com
