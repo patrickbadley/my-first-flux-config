@@ -18,4 +18,4 @@ spec:
       image: patrickbadley/values-ui:simple
 
     api:
-      image: patrickbadley/values-api:simple
+      image: patrickbadley/values-api:simple-with-https
