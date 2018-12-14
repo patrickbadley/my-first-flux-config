@@ -10,12 +10,12 @@ metadata:
     flux.weave.works/tag.api: glob:*
 spec:
   chart:
-    git: git@github.com:[mygitrepo]/my-first-flux-config.git
+    git: git@github.com:patrickbadley/my-first-flux-config.git
     path: charts/my-first-app
   releaseName: my-first-release
   values:
     angular:
-      image: [mydockerhubregistry]/values-ui:simple
+      image: patrickbadley/values-ui:simple
 
     api:
-      image: [mydockerhubregistry]/values-api:simple
+      image: patrickbadley/values-api:simple
