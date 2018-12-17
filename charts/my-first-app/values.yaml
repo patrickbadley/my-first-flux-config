@@ -13,4 +13,4 @@ api:
   type: ClusterIP
 
 ingress:
-  hostname: my-first-k8s-app.eastus.cloudapp.azure.com
+  hostname: my-first-k8s-app-2.eastus.cloudapp.azure.com
