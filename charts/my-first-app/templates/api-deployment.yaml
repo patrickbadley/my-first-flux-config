@@ -22,12 +22,12 @@ spec:
           volumeMounts:
             - name: my-first-key-config-map
               mountPath: "/etc/config/keys/"
-            - name: my-first-config-file-config-map
+            - name: my-first-file-config-map
               mountPath: "/etc/config/"
       volumes:
         - name: my-first-key-config-map
           configMap:
             name: my-first-key-config-map
-        - name: my-first-config-file-config-map
+        - name: my-first-file-config-map
           configMap:
-            name: my-first-config-file-config-map
+            name: my-first-file-config-map
