@@ -8,8 +8,8 @@ angular:
 api:
   appName: api
   image: mydockerhubregistry/values-api:simple
-  servicePort: 80
-  containerPort: 80
+  servicePort: 443
+  containerPort: 443
   type: ClusterIP
 
 ingress:
