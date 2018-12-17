@@ -18,3 +18,10 @@ spec:
           image: {{ .Values.angular.image }}
           ports:
           - containerPort: {{ .Values.angular.containerPort }}
+          volumeMounts:
+            - name: my-first-angular-config-map
+              mountPath: "/usr/src/app/src/assets/config"
+      volumes:
+        - name: my-first-angular-config-map
+          configMap:
+            name: my-first-angular-config-map
