@@ -20,10 +20,8 @@ spec:
           ports:
           - containerPort: {{ .Values.api.containerPort }}
           env:
-          - name: ASPNET_HTTP_PORT
-            value: "80"
           - name: ASPNET_HTTPS_PORT
-            value: "443"
+            value: "{{ .Values.api.containerPort }}"
           volumeMounts:
             - name: my-first-key-config-map
               mountPath: "/etc/config/keys/"
